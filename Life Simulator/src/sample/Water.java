@@ -5,6 +5,10 @@ public class Water {
     private int y;
     private boolean isPlaced;
 
+    public Water(){
+
+
+    }
 
 
 

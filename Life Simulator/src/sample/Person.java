@@ -9,7 +9,6 @@ public class Person {
     private double speed;
     private int intellect;
     private boolean isSolitary;
-    private int strength;
     private long startTime;
     private int x;
     private int y;
@@ -129,36 +128,25 @@ public class Person {
 
             }
 
-            for (int i=0;i<whatIsInFront.length;i++){
-                for (int w=0;w<whatIsInFront[i].length;w++){
-                    System.out.print(whatIsInFront[i][w]);
-                }
-                System.out.println("  ");
-
-
-            }
-            System.out.println(" ");
-            System.out.println(" ");
-            System.out.println(" ");
-            System.out.println(" ");
-
-
-
-
-
-
-
-
-
-
-
-
-
+//            for (int i=0;i<whatIsInFront.length;i++){
+//                for (int w=0;w<whatIsInFront[i].length;w++){
+//                    System.out.print(whatIsInFront[i][w]);
+//                }
+//                System.out.println("  ");
+//
+//
+//            }
+//            System.out.println(" ");
+//            System.out.println(" ");
+//            System.out.println(" ");
+//            System.out.println(" ");
+//
+//
 
             if (direction == 0) {
                 for (int i = 0; i < whatIsInFront.length; i++) {
                     for (int w = 0; w < whatIsInFront[i].length; w++) {
-                        if (whatIsInFront[i][w] == 2) {
+                        if (whatIsInFront[i][w] == 2||whatIsInFront[i][w] == 3) {
                             if (x - (i + 1) < 0) {
                                 cordsGoingToRn[0] = w;
                                 cordsGoingToRn[1] = y - (i+1);
@@ -243,6 +231,8 @@ public class Person {
     }
 
 
+    // pre have a pos going too,
+    //post moves 1 forward
     private int[] moveToSpot(){
         int[] spot = new int[]{x,y};
 
@@ -260,29 +250,18 @@ public class Person {
             isGoingSomewhere = false;
         }
 
-
-
         return spot;
     }
-
-
-
-
 
 
     public int getX() {
         return x;
     }
-
     public int getY() {
         return y;
     }
 
-
-
-
-
-
-
-
+    public boolean isMale() {
+        return isMale;
+    }
 }
